@@ -56,17 +56,6 @@
                             class="w-full h-full pl-2 outline-none bg-transparent text-base placeholder:text-gray-500" />
                     </div>
                     {{-- Notification bell --}}
-                    <div class="flex justify-center items-center w-10 h-10 md:w-[50px] md:h-[50px] rounded-full bg-white"
-                        {{-- Sesuaikan ukuran dan radius --}} style="box-shadow: 0px 4px 10px 0 rgba(0,0,0,0.05);">
-                        <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 md:w-[30px] md:h-[32px] flex-shrink-0" preserveAspectRatio="xMidYMid meet">
-                            {{-- Perkecil ikon --}}
-                            <path
-                                d="M12.4011 29.5001C12.6645 29.9561 13.0432 30.3348 13.4992 30.5981C13.9553 30.8614 14.4726 31 14.9992 31C15.5258 31 16.0431 30.8614 16.4991 30.5981C16.9552 30.3348 17.3339 29.9561 17.5972 29.5001M1.89191 20.9891C1.69595 21.2039 1.56664 21.471 1.51969 21.7579C1.47274 22.0448 1.51018 22.3392 1.62747 22.6052C1.74475 22.8712 1.93682 23.0974 2.1803 23.2563C2.42379 23.4152 2.7082 23.4999 2.99894 23.5001H26.9994C27.2901 23.5002 27.5746 23.4158 27.8182 23.2573C28.0619 23.0987 28.2542 22.8727 28.3718 22.6069C28.4894 22.341 28.5272 22.0467 28.4806 21.7598C28.434 21.4728 28.3051 21.2056 28.1095 20.9906C26.1144 18.9341 23.9994 16.7486 23.9994 10C23.9994 7.61308 23.0511 5.32389 21.3633 3.63605C19.6754 1.94822 17.3862 1 14.9992 1C12.6122 1 10.323 1.94822 8.63509 3.63605C6.94723 5.32389 5.999 7.61308 5.999 10C5.999 16.7486 3.88245 18.9341 1.89191 20.9891Z"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                        </svg>
-                    </div>
                 </div>
             </div>
 
@@ -84,7 +73,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"> {{-- Sesuaikan gap --}}
                 {{-- Card: Buku --}}
                 <div
-                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-[27px] rounded-lg md:rounded-[20px] bg-white shadow-md">
+                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-3 rounded-lg md:rounded-[20px] bg-white shadow-md">
                     {{-- Sesuaikan padding dan radius --}}
                     <div class="flex justify-start items-center gap-4 md:gap-[25px]"> {{-- Sesuaikan gap --}}
                         <svg width="41" height="50" viewBox="0 0 41 50" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +99,7 @@
                 </div>
                 {{-- Card: Jurnal --}}
                 <div
-                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-[30px] rounded-lg md:rounded-[20px] bg-white shadow-md">
+                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-3 rounded-lg md:rounded-[20px] bg-white shadow-md">
                     {{-- Sesuaikan padding dan radius --}}
                     <div class="flex justify-start items-center gap-4 md:gap-[25px]"> {{-- Sesuaikan gap --}}
                         <svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +121,7 @@
                 </div>
                 {{-- Card: Dokumen Skripsi --}}
                 <div
-                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-[34px] rounded-lg md:rounded-[20px] bg-white shadow-md">
+                    class="flex flex-col justify-center items-start p-4 md:px-5 md:py-3 rounded-lg md:rounded-[20px] bg-white shadow-md">
                     {{-- Sesuaikan padding dan radius --}}
                     <div class="flex justify-start items-center gap-4 md:gap-[25px]"> {{-- Sesuaikan gap --}}
                         <svg width="41" height="52" viewBox="0 0 41 52" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +143,7 @@
                 </div>
                 {{-- Card: Status Keluar --}}
                 <div
-                    class="flex flex-col justify-start items-start p-4 md:px-5 md:py-[35px] rounded-lg md:rounded-[20px] bg-white shadow-md">
+                    class="flex flex-col justify-start items-start p-4 md:px-5 md:py-3 rounded-lg md:rounded-[20px] bg-white shadow-md">
                     {{-- Sesuaikan padding dan radius --}}
                     <div class="flex justify-start items-center gap-4 md:gap-[25px]"> {{-- Sesuaikan gap --}}
                         <svg width="43" height="46" viewBox="0 0 43 46" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +173,7 @@
             {{-- Aktivitas Section --}}
             <div class="p-4 md:p-8 rounded-lg md:rounded-[30px] bg-white shadow-md"> {{-- Sesuaikan padding dan radius
                 --}}
-                <p class="text-lg md:text-xl font-bold text-black mb-3 md:mb-4">Aktivitas</p> {{-- Sesuaikan ukuran font
+                <p class="text-lg md:text-xl font-bold text-black mb-3 md:mb-4">Daftar Pengajuan Peminjaman</p> {{-- Sesuaikan ukuran font
                 dan margin --}}
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
