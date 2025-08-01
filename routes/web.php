@@ -17,3 +17,7 @@ Route::get('/koleksi', function () {
 Route::get('/aktivitas', function () {
     return view('aktivitas');
 });
+
+// use App\Http\Controllers\KoleksiController;
+// Route::get('/koleksi', [KoleksiController::class, 'index'])->name('koleksi.index');
+

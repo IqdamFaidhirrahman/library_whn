@@ -1,3 +1,13 @@
+{{-- <?php
+// session_start();
+
+// // Cek jika user belum login, redirect ke halaman login
+// if (!isset($_SESSION['email'])) {
+//     header("Location: login.blade.php");
+//     exit();
+// }
+?> --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,16 +32,10 @@
                 untuk mobile, flex-row untuk desktop --}}
                 <div class="flex items-center gap-2">
                     <p class="text-sm md:text-base font-bold text-black"> {{-- Sesuaikan ukuran font --}}
-                        Rabu, 09 Juli 2025
+                        {{-- Menggunakan Carbon untuk menampilkan tanggal hari ini dalam format "Hari, DD Bulan YYYY"
+                        --}}
+                        {{ \Carbon\Carbon::now()->locale('id')->isoFormat('dddd, DD MMMM YYYY') }}
                     </p>
-                    {{-- Ikon panah --}}
-                    <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="w-3 h-4 md:w-[12.98px] md:h-5 flex-shrink-0" preserveAspectRatio="xMidYMid meet"> {{--
-                        Perkecil ikon --}}
-                        <path
-                            d="M11.1427 12.5428L6.49908 17.3175L1.8554 12.5428C1.65158 12.3337 1.37513 12.2162 1.08687 12.2162C0.798614 12.2162 0.522165 12.3337 0.318337 12.5428C0.114509 12.7519 0 13.0355 0 13.3312C0 13.6269 0.114509 13.9105 0.318337 14.1196L5.73054 19.6715C5.83117 19.7756 5.95089 19.8582 6.08279 19.9146C6.2147 19.971 6.35618 20 6.49908 20C6.64197 20 6.78345 19.971 6.91536 19.9146C7.04726 19.8582 7.16698 19.7756 7.26761 19.6715L12.6798 14.1196C12.7807 14.016 12.8608 13.8931 12.9154 13.7579C12.97 13.6226 12.9982 13.4776 12.9982 13.3312C12.9982 13.1848 12.97 13.0398 12.9154 12.9045C12.8608 12.7692 12.7807 12.6463 12.6798 12.5428C12.5789 12.4393 12.4591 12.3571 12.3272 12.3011C12.1953 12.2451 12.054 12.2162 11.9113 12.2162C11.7686 12.2162 11.6272 12.2451 11.4954 12.3011C11.3635 12.3571 11.2437 12.4393 11.1427 12.5428ZM1.8554 7.45719L6.49908 2.68249L11.1427 7.45719C11.2434 7.56127 11.3631 7.64388 11.495 7.70025C11.6269 7.75662 11.7684 7.78565 11.9113 7.78565C12.0542 7.78565 12.1957 7.75662 12.3276 7.70025C12.4595 7.64388 12.5792 7.56127 12.6798 7.45719C12.7813 7.35397 12.8618 7.23116 12.9168 7.09585C12.9717 6.96053 13 6.8154 13 6.66881C13 6.52223 12.9717 6.37709 12.9168 6.24178C12.8618 6.10647 12.7813 5.98366 12.6798 5.88043L7.26761 0.328453C7.16698 0.224378 7.04726 0.14177 6.91536 0.0853971C6.78345 0.0290238 6.64197 0 6.49908 0C6.35618 0 6.2147 0.0290238 6.08279 0.0853971C5.95089 0.14177 5.83117 0.224378 5.73054 0.328453L0.318337 5.88043C0.217412 5.98396 0.137354 6.10687 0.0827334 6.24214C0.0281131 6.37741 0 6.5224 0 6.66881C0 6.96451 0.114509 7.2481 0.318337 7.45719C0.522165 7.66629 0.798614 7.78375 1.08687 7.78375C1.37513 7.78375 1.65158 7.66629 1.8554 7.45719Z"
-                            fill="black"></path>
-                    </svg>
                 </div>
 
                 <div class="flex items-center gap-2 md:gap-4 flex-wrap justify-center sm:justify-end"> {{-- Flex-wrap
@@ -63,6 +67,7 @@
             <div class="flex flex-col items-start gap-1.5 md:gap-2.5"> {{-- Sesuaikan gap --}}
                 <p class="text-base md:text-lg font-bold text-black"> {{-- Sesuaikan ukuran font --}}
                     Selamat Datang, Zulfikar
+                    {{-- {{ user.name admin }} --}}
                 </p>
                 <p class="text-xs md:text-sm font-medium text-black"> {{-- Sesuaikan ukuran font --}}
                     Admin, Wira Husada Nusantara
@@ -173,7 +178,8 @@
             {{-- Aktivitas Section --}}
             <div class="p-4 md:p-8 rounded-lg md:rounded-[30px] bg-white shadow-md"> {{-- Sesuaikan padding dan radius
                 --}}
-                <p class="text-lg md:text-xl font-bold text-black mb-3 md:mb-4">Daftar Pengajuan Peminjaman</p> {{-- Sesuaikan ukuran font
+                <p class="text-lg md:text-xl font-bold text-black mb-3 md:mb-4">Daftar Pengajuan Peminjaman</p> {{--
+                Sesuaikan ukuran font
                 dan margin --}}
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
